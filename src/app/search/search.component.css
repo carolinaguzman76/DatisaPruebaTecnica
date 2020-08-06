@@ -1,0 +1,13 @@
+.headboard {
+  text-align: center;
+}
+
+.calendar {
+  display: flex;
+  justify-content: space-between;
+  margin: 5% 27%
+}
+
+.btnSearch {
+  text-align: center;
+}
