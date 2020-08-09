@@ -3,26 +3,26 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { SearchComponent } from './search/search.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SearchComponent } from './components/search/search.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ResultsTableComponent } from './results-table/results-table.component';
+import { ResultsTableComponent } from './components/results-table/results-table.component';
 
 
 @NgModule({
-   declarations: [
-      AppComponent,
-      SearchComponent,
-      ResultsTableComponent
-   ],
-   imports: [
-      NgbModule,
-      BrowserModule,
-      HttpClientModule
-   ],
-   providers: [],
-   bootstrap: [
-      AppComponent
-   ]
+  declarations: [
+    AppComponent,
+    SearchComponent,
+    ResultsTableComponent
+  ],
+  imports: [
+    NgbModule,
+    BrowserModule,
+    HttpClientModule
+  ],
+  providers: [],
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }

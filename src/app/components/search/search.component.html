@@ -16,7 +16,7 @@
 </div>
 
 <div class="btnSearch">
-  <button type="button" (click)="searchAsteroids()">Buscar</button>
+  <button type="button" (click)="searchAsteroids()" [disabled]= "!(newInitialDate && newFinalDate)">Buscar</button>
 </div>
 
 <div *ngIf="asteroids">

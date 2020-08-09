@@ -1,0 +1,24 @@
+<h3 class="textTitles">Asteroides</h3>
+
+<div class="asteroidsTable">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+
+        <th scope="col">NOMBRE</th>
+        <th scope="col">LINK NASA</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let nearEarthObject of nearEarthObjects">
+
+        <td>{{nearEarthObject.name}}</td>
+        <td>
+          <a [href]="nearEarthObject.nasa_jpl_url">{{nearEarthObject.nasa_jpl_url}}</a>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
