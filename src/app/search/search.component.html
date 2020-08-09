@@ -9,12 +9,18 @@
 
 <div class="calendar">
 
-  <ngb-datepicker #d></ngb-datepicker>
+  <ngb-datepicker (dateSelect)="dateFrom($event)"></ngb-datepicker>
 
-  <ngb-datepicker #e></ngb-datepicker>
+  <ngb-datepicker (dateSelect)="dateTo($event)"></ngb-datepicker>
 
 </div>
 
 <div class="btnSearch">
-  <button type="button">Buscar</button>
+  <button type="button" (click)="searchAsteroids()">Buscar</button>
+</div>
+
+<div *ngIf="asteroids">
+
+  <app-results-table [asteroids]="asteroids"></app-results-table>
+
 </div>
