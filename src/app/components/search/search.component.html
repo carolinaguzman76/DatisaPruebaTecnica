@@ -11,7 +11,7 @@
 
   <ngb-datepicker (dateSelect)="dateFrom($event)"></ngb-datepicker>
 
-  <ngb-datepicker (dateSelect)="dateTo($event)"></ngb-datepicker>
+  <ngb-datepicker (dateSelect)="dateTo($event)" [maxDate]= "getMaxDate()" [minDate]= "getMinDate()"></ngb-datepicker>
 
 </div>
 
