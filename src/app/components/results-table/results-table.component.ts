@@ -21,6 +21,8 @@ export class ResultsTableComponent implements OnChanges {
       this.nearEarthObjects.push(...this.asteroids.near_earth_objects[values]);
     });
 
+
+
   }
 
 

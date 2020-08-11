@@ -2,8 +2,7 @@ export interface AsteroidsNeowsModel {
 
   links: Links;
   element_count: number;
-  near_earth_objects: any;
-
+  near_earth_objects: { [fecha: string]: Array<NearObject> };
 
 }
 
@@ -19,6 +18,7 @@ export interface NearObject {
 
   name: string;
   nasa_jpl_url: string;
+
 }
 
 
