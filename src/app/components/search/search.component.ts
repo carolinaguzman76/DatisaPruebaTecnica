@@ -3,6 +3,7 @@ import { NgbDate } from '@ng-bootstrap/ng-bootstrap/datepicker/ngb-date'
 import { SearchService } from '../../services/search.service';
 import { AsteroidsNeowsModel } from '../../model/asteroidsNeowsModel';
 import { NgbDateStruct, NgbCalendar } from '@ng-bootstrap/ng-bootstrap';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search',
