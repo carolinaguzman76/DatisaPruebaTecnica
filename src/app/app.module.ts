@@ -8,13 +8,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SearchComponent } from './components/search/search.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ResultsTableComponent } from './components/results-table/results-table.component';
+import { SolarFlareComponent } from './components/solar-flare/solar-flare.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
-    ResultsTableComponent
+    ResultsTableComponent,
+    SolarFlareComponent
   ],
   imports: [
     NgbModule,

@@ -124,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "nasaAngular"
+    }
+  },
+  "defaultProject": "nasaAngular",
+  "cli": {
+    "analytics": "1f9dda28-c69b-45c1-8877-bd16959a466a"
+  }
 }
