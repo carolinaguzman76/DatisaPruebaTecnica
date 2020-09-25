@@ -11,7 +11,7 @@ export class SolarFlareService {
 
   constructor(private http: HttpClient) { }
 
-  getAsteroids(start_date: string, end_date: string): Observable<SolarFlareModel> {
+  getSolarFlare(start_date: string, end_date: string): Observable<SolarFlareModel> {
     return this.http.get<SolarFlareModel>(`https://api.nasa.gov/DONKI/FLR?startDate=${start_date}&endDate=${end_date}&api_key=${environment.apiKey}`);
 
   }

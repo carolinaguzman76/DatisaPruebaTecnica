@@ -9,6 +9,7 @@ import { SearchComponent } from './components/search/search.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ResultsTableComponent } from './components/results-table/results-table.component';
 import { SolarFlareComponent } from './components/solar-flare/solar-flare.component';
+import { SearchSolarFlareComponent } from './components/search-solar-flare/search-solar-flare.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { SolarFlareComponent } from './components/solar-flare/solar-flare.compon
     AppComponent,
     SearchComponent,
     ResultsTableComponent,
-    SolarFlareComponent
+    SolarFlareComponent,
+    SearchSolarFlareComponent
   ],
   imports: [
     NgbModule,
