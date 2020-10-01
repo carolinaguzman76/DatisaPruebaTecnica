@@ -12,7 +12,8 @@ export class ResultsTableComponent implements OnChanges {
 
   nearEarthObjects: Array<NearObject> = [];
 
-  constructor() { }
+  constructor() {}
+
   ngOnChanges(changes: SimpleChanges): void {
 
     this.nearEarthObjects = [];

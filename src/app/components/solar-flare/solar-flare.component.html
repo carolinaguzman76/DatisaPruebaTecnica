@@ -1,2 +1,21 @@
-<p>solar-flare works!</p>
+<h3 class="textTitles">Erupciones solares</h3>
+
+<div class="solarFlareTable">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+
+        <th scope="col">NOMBRE</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let instrument of instruments">
+
+        <td>{{instrument.displayName}}</td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
 

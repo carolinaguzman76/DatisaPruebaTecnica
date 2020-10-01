@@ -10,7 +10,10 @@ import { environment } from '../../environments/environment';
 })
 export class SearchService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    console.log('esto es el constructor');
+    console.log(environment);
+   }
 
   getAsteroids(start_date: string, end_date: string): Observable<AsteroidsNeowsModel> {
     return this.http.get<AsteroidsNeowsModel>(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${start_date}&end_date=${end_date}&api_key=${environment.apiKey}`);

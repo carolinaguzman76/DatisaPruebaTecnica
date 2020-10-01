@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { SolarFlareModel } from 'src/app/model/solarFlareModel';
+import {   Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Instruments, SolarFlareModel } from 'src/app/model/solarFlareModel';
 import { SolarFlareService } from '../../services/solar-flare.service';
 
 @Component({
@@ -7,24 +7,26 @@ import { SolarFlareService } from '../../services/solar-flare.service';
   templateUrl: './solar-flare.component.html',
   styleUrls: ['./solar-flare.component.css'],
 })
-export class SolarFlareComponent implements OnInit {
+export class SolarFlareComponent implements OnChanges {
+  @Input() flare: SolarFlareModel;
 
-  flare: SolarFlareModel;
+  instruments: Array<Instruments> = [];
 
-  constructor(private solarFlareService: SolarFlareService) {}
+  constructor() {}
 
   ngOnInit(): void {
 
-    console.log('esto es el onInit');
+    console.log('esto es el OnInit')
+    console.log(Object.keys(this.flare))
 
-   this.solarFlareService.getSolarFlare('2020-03-01','2020-07-01').subscribe(value => {
-    this.flare = value;
-    console.log(this.flare)
+  }
 
-  },
-    err => {
-      this.flare = undefined;
-      alert('Error al invocar a los servicios de la NASA. Por favor, intente otros valores');
+
+  ngOnChanges(changes: SimpleChanges): void {
+    this.instruments = [];
+
+    Object.keys(this.flare.instruments).forEach((values) => {
+      this.instruments.push(...this.flare.instruments[values]);
     });
 
   }

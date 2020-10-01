@@ -1,1 +1,27 @@
-<p>search-solar-flare works!</p>
+<div class="headboard">
+  <h2>Busquemos erupciones solares!</h2>
+
+  <p>
+    Selecciona fecha de inicio y fin para tu búsqueda
+  </p>
+</div>
+
+
+<div class="calendar">
+
+  <ngb-datepicker (dateSelect)="dateFrom($event)"></ngb-datepicker>
+
+  <ngb-datepicker (dateSelect)="dateTo($event)" [maxDate]= "getMaxDate()" [minDate]= "getMinDate()"></ngb-datepicker>
+
+</div>
+
+<div class="btnSearch">
+  <button type="button" (click)="searchSolarFlare()" [disabled]= "!(newInitialDate && newFinalDate)">Buscar</button>
+</div>
+
+<div *ngIf="flare">
+
+  <app-solar-flare [flare]="flare"></app-solar-flare>
+
+</div>
+
