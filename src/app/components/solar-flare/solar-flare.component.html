@@ -4,18 +4,34 @@
   <table class="table table-striped">
     <thead>
       <tr>
-
+        <th scope="col">FLRID</th>
         <th scope="col">NOMBRE</th>
-
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let instrument of instruments">
+      <tr *ngFor="let flare of flares">
 
-        <td>{{instrument.displayName}}</td>
+        <td>{{flare.flrID}}</td>
+
+        <td>
+          <!-- <div *ngFor="let instrument of flare.instruments">{{instrument.displayName}}</div> -->
+          <div>GOES15: SEM/XRS 1.0-8.0</div>
+          <div>GOES15: SEM/XRS 1.0-8.0</div>
+          <div>GOES15: SEM/XRS 1.0-8.0</div>
+          <div>GOES15: SEM/XRS 1.0-8.0</div>
+          <div>GOES15: SEM/XRS 1.0-8.0</div>
+        </td>
 
       </tr>
+
+
+
+      <!-- <tr *ngFor="let elementSolarFlare of elementsSolarFlare"> -->
+        <!-- *ngFor="let instrument of instruments" -->
+        <!-- <td>{{elementSolarFlare[0].flrID}}</td> -->
+
+        <!-- <td>{{elementSolarFlare[0].instruments[0].displayName}}</td> -->
+      <!-- </tr> -->
     </tbody>
   </table>
 </div>
-

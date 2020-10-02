@@ -21,27 +21,21 @@ export class SearchSolarFlareComponent implements OnInit {
 
 
 
-  flare: SolarFlareModel;
+  flare: SolarFlareModel[];
 
   constructor(private searchService: SolarFlareService, private calendar: NgbCalendar) {
 
    }
 
-  ngOnInit(): void {
-
-    console.log('esto es searchSolarFlare');
-
-  }
+  ngOnInit(): void {}
 
   searchSolarFlare(): void {
 
     this.searchService.getSolarFlare(this.newInitialDate, this.newFinalDate).subscribe(value => {
       this.flare = value;
 
-      console.log('esto es el servicio');
+      console.log('esto es el valor del servicio');
       console.log(value);
-      console.log(this.newInitialDate);
-      console.log(this.newFinalDate);
 
     },
       err => {
